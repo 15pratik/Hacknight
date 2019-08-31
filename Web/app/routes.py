@@ -1,5 +1,6 @@
 from flask import render_template, Flask, request, redirect, url_for, jsonify
 from app import app
+from app.prediction_model.predict import predict
 
 @app.route('/')
 @app.route('/index')
