@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Sign In</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.age.label }}<br>
+            {{ form.age() }}
+        </p>
+        <p>
+            {{ form.gender.label }}<br>
+            {{ form.gender() }}
+        </p>
+        <p>
+            {{ form.country.label }}<br>
+            {{ form.country() }}
+        </p>
+        <p>
+            {{ form.state.label }}<br>
+            {{ form.state() }}
+        </p>
+        <p>
+            {{ form.self_employed.label }}<br>
+            {{ form.self_employed() }}
+        </p>
+        <p>
+            {{ form.family_history.label }}<br>
+            {{ form.family_history() }}
+        </p>
+        <p>
+            {{ form.work_interfere.label }}<br>
+            {{ form.work_interfere() }}
+        </p>
+        <p>
+            {{ form.no_employees.label }}<br>
+            {{ form.no_employees() }}
+        </p>
+        <p>
+            {{ form.remote_work.label }}<br>
+            {{ form.remote_work() }}
+        </p>
+        <p>
+            {{ form.tech_company.label }}<br>
+            {{ form.tech_company() }}
+        </p>
+        <p>
+            {{ form.benefits.label }}<br>
+            {{ form.benefits() }}
+        </p>
+        <p>
+            {{ form.care_options.label }}<br>
+            {{ form.care_options() }}
+        </p>
+        <p>
+            {{ form.wellness_program.label }}<br>
+            {{ form.wellness_program() }}
+        </p>
+        <p>
+            {{ form.seek_help.label }}<br>
+            {{ form.seek_help() }}
+        </p>
+        <p>
+            {{ form.anonymity.label }}<br>
+            {{ form.anonymity() }}
+        </p>
+        <p>
+            {{ form.leave.label }}<br>
+            {{ form.leave() }}
+        </p>
+        <p>
+            {{ form.leave.label }}<br>
+            {{ form.leave() }}
+        </p>
+        <p>
+            {{ form.mental_health_consequence.label }}<br>
+            {{ form.mental_health_consequence() }}
+        </p>
+        <p>
+            {{ form.coworkers.label }}<br>
+            {{ form.coworkers() }}
+        </p>
+        <p>
+            {{ form.supervisor.label }}<br>
+            {{ form.supervisor() }}
+        </p>
+        <p>
+            {{ form.mental_health_interview.label }}<br>
+            {{ form.mental_health_interview() }}
+        </p>
+        <p>
+            {{ form.phys_health_interview.label }}<br>
+            {{ form.phys_health_interview() }}
+        </p>
+        <p>
+            {{ form.mental_vs_physical.label }}<br>
+            {{ form.mental_vs_physical() }}
+        </p>
+        <p>
+            {{ form.obs_consequence.label }}<br>
+            {{ form.obs_consequence() }}
+        </p>
+        <p>
+            {{ form.comments.label }}<br>
+            {{ form.comments() }}
+        </p>   
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}

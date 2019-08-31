@@ -1,0 +1,31 @@
+from flask_wtf import FlaskForm
+from wtforms import StringField, PasswordField, BooleanField, SubmitField, IntegerField
+from wtforms.validators import DataRequired
+
+class DataForm(FlaskForm):
+    age = IntegerField('Age')
+    gender = StringField('Gender')
+    country = StringField('Country')
+    state = StringField('State')
+    self_employed = StringField('Self Employed')
+    family_history = StringField('Family History')
+    work_interfere = StringField('Work Interfere')
+    no_employees = StringField('No. of Employees')
+    remote_work = StringField('Remote Work')
+    tech_company = StringField('Tech Company')
+    benefits = StringField('Benefits')
+    care_options = StringField('Care Options')
+    wellness_program = StringField('Wellness Program')
+    seek_help = StringField('Seek Help')
+    anonymity = StringField('Anonymity')
+    leave = StringField('Leave')
+    mental_health_consequence = StringField('Mental Health Consequence')
+    phys_health_consequence = StringField('Physical')
+    coworkers = StringField("CoWorkers")
+    supervisor = StringField("Supervisor")
+    mental_health_interview = StringField("Mental Health Interview")
+    phys_health_interview = StringField("Physical Health Interview")
+    mental_vs_physical = StringField("Mental vs Physical")
+    obs_consequence = StringField("Obs Consequence")
+    comments = StringField("Comments")
+    submit = SubmitField('Predict')
