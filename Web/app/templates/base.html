@@ -1,0 +1,14 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - MentalHealth</title>
+      {% else %}
+      <title>Welcome to MentalHealth</title>
+      {% endif %}
+    </head>
+    <body>
+        <div><b>MentalHealth</b>: <a href="/index">Home</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
