@@ -16,7 +16,7 @@ from sklearn import metrics
 import numpy as np
 import pickle
 
-dataset = pd.read_csv(r'./trainms.csv',parse_dates=['Timestamp'],index_col='s.no')
+dataset = pd.read_csv(r'./app/prediction_model/trainms.csv',parse_dates=['Timestamp'],index_col='s.no')
 dataset = dataset.drop(['Timestamp'],axis=1)
 
 dataset= dataset.replace(np.nan, '', regex=True)
@@ -32,7 +32,7 @@ for col in x.columns:
     print("{} {}".format(idx, col))
     idx += 1
     x[col]=label_encoder.fit_transform(x[col])
-    outfile = 'columns/' + col
+    outfile = './app/prediction_model/columns/' + col
     with open(outfile, 'wb') as pickle_file:
         pickle.dump(label_encoder, pickle_file)
 
@@ -50,7 +50,7 @@ x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2)
 
 trained_model = RandomForestClassifier().fit(x,y)
 
-outfile = 'prediction.model'
+outfile = './app/prediction_model/prediction.model'
 with open(outfile, 'wb') as pickle_file:
 	pickle.dump(trained_model, pickle_file)
 
@@ -63,11 +63,10 @@ a=trained_model.feature_importances_
 print(a)
 
 #report = metrics.classification_report(y_test, y_pred, output_dict=True)
-#
 #df = dp.DataFrame(report).transpose()
 
-print(np.amax(a))
-print(np.amin(a))
+# print(np.amax(a))
+# print(np.amin(a))
 result = np.where(a==np.amin(a))
-print(result)
-#print(metrics.classification_report(y_test,y_pred))
+# print(result)
+# print(metrics.classification_report(y_test,y_pred))

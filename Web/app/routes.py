@@ -1,6 +1,6 @@
 from flask import render_template, Flask, request, redirect, url_for, jsonify
 from app import app
-from app.prediction_model.predict import predict
+from app.prediction_model.predict import treatment_prediction 
 
 @app.route('/')
 @app.route('/index')
@@ -15,5 +15,5 @@ def form():
     if request.method=='POST':
         for k in request.form.keys():
             print(request.form)
-            result = predict(request.form)
+            result = treatment_prediction(request.form)
         return render_template("result.html", prob_yes = result)
