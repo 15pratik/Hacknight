@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Details Form</title>
+</head>
+<body>
+<div class = 'pane'>
+<form action="{{ url_for('form')}}" method = 'post'>
+
+<dl>
+	<dt>Name:</dt>
+		<dd><input type ='text' size='30' name='name'></dd>
+	<dt>Age:</dt>
+		<dd><input type="text"  size="3" name="age" > </input></dd>
+	<dt>Gender:</dt>
+        <dd><input type = 'radio' name='gender' value="Male"></dd>
+        <dd><input type="radio" name="gender" value="Female"></dd>
+    <dt>Country:</dt>
+        <dd><input type="text" size="50" name="country"></dd>
+    <dt>State:</dt>
+        <dd><input type="text" size="50" name="state"></dd>
+    <dt>Self Employed:</dt>
+        <dd><input type ='radio' name='self_employed' value='Yes'>Yes</dd>
+		<dd><input type ='radio' name='self_employed' value='No'>No</dd>
+    <dt>Family History:</dt>
+        <dd><input type ='radio' name='family_history' value='Yes'>Yes</dd>
+		<dd><input type ='radio' name='family_history' value='No'>No</dd>
+        <dd><input type ='radio' name='family_history' value='May be'>May be</dd>
+	<dt>Work Interfere:</dt>
+		<dd><input type ='radio' name='work_interfere' value='Often'>Often</dd>
+		<dd><input type ='radio' name='work_interfere' value='Rarely'>Rarely</dd>
+		<dd><input type ='radio' name='work_interfere' value='Never'>Never</dd>
+    <dt>No of Employees</dt>
+        <dd><input type="text" size="50" name="no_employees"></dd>
+     <dt>Remote Work:</dt>
+        <dd><input type ='radio' name='remote_work' value='Yes'>Yes</dd>
+		<dd><input type ='radio' name='remote_work' value='No'>No</dd>
+    <dt>Self Employed:</dt>
+        <dd><input type ='radio' name='remote_work' value='Yes'>Yes</dd>
+		<dd><input type ='radio' name='remote_work' value='No'>No</dd>
+     <dt>Tech Company:</dt>
+        <dd><input type ='radio' name='tech_company' value='Yes'>Yes</dd>
+		<dd><input type ='radio' name='tech_company' value='No'>No</dd>
+    <dt>Benefits:</dt>
+        <dd><input type ='radio' name='benefits' value='Yes'>Yes</dd>
+		<dd><input type ='radio' name='benefits' value='No'>No</dd>
+        <dd><input type ='radio' name='benefits' value="Don't know">Don't know</dd>
+    <dt>Care Options in Company:</dt>
+        <dd><input type ='radio' name='care_options' value='Yes'>Yes</dd>
+		<dd><input type ='radio' name='care_options' value='No'>No</dd>
+        <dd><input type ='radio' name='care_options' value='Not sure'>Not Sure</dd>
+     <dt>Attended Wellness Programs:</dt>
+        <dd><input type ='radio' name='wellness_program' value='Yes'>Yes</dd>
+		<dd><input type ='radio' name='wellness_program' value='No'>No</dd>
+        <dd><input type ='radio' name='wellness_program' value="Don't know">Don't know</dd>
+    <dt>Seek Help of Others:</dt>
+        <dd><input type ='radio' name='seek_help' value='Yes'>Yes</dd>
+		<dd><input type ='radio' name='seek_help' value='No'>No</dd>
+        <dd><input type ='radio' name='seek_help' value="Don't know">Don't know</dd>
+    <dt>Anonymity:</dt>
+        <dd><input type ='radio' name='anonymity' value='Yes'>Yes</dd>
+		<dd><input type ='radio' name='anonymity' value='No'>No</dd>
+        <dd><input type ='radio' name='anonymity' value="Don't know">Don't know</dd>
+    <dt>Leave Policy:</dt>
+        <dd><input type ='radio' name='leave' value='Somewhat easy'>Somewhat easy</dd>
+		<dd><input type ='radio' name='leave' value='Very easy'>Very easy</dd>
+        <dd><input type ='radio' name='leave' value="Don't know">Don't know</dd>
+    <dt>Mental Health Consequences:</dt>
+        <dd><input type ='radio' name='mental_health_consequence' value='Yes'>Yes</dd>
+		<dd><input type ='radio' name='mental_health_consequence' value='No'>No</dd>
+        <dd><input type ='radio' name='mental_health_consequence' value="Maybe">May Be</dd>
+    <dt>Physical Health Consequences:</dt>
+        <dd><input type ='radio' name='phys_health_consequence' value='Yes'>Yes</dd>
+		<dd><input type ='radio' name='phys_health_consequence' value='No'>No</dd>
+        <dd><input type ='radio' name='phys_health_consequence' value="Maybe">May Be</dd>
+     <dt>Supervisor:</dt>
+        <dd><input type ='radio' name='phys_health_consequence' value='Yes'>Yes</dd>
+		<dd><input type ='radio' name='phys_health_consequence' value='No'>No</dd>
+        <dd><input type ='radio' name='phys_health_consequence' value="Some of them">Some of them</dd>
+    <dt>Any Mental Health Interview:</dt>
+        <dd><input type ='radio' name='mental_health_interview' value='Yes'>Yes</dd>
+		<dd><input type ='radio' name='mental_health_interview' value='No'>No</dd>
+        <dd><input type ='radio' name='mental_health_interview' value="Maybe">May Be</dd>
+    <dt>Any Physical Health Interview:</dt>
+        <dd><input type ='radio' name='phys_health_interview' value='Yes'>Yes</dd>
+		<dd><input type ='radio' name='phys_health_interview' value='No'>No</dd>
+        <dd><input type ='radio' name='phys_health_interview' value="Maybe">May Be</dd>
+    <dt>Mental vs Physical Health:</dt>
+        <dd><input type ='radio' name='mental_vs_physical' value='Yes'>Yes</dd>
+		<dd><input type ='radio' name='mental_vs_physical' value='No'>No</dd>
+        <dd><input type ='radio' name='mental_vs_physical' value="Don't know">Don't know</dd>
+     <dt>Observable Consequences:</dt>
+        <dd><input type ='radio' name='obs_consequence' value='Yes'>Yes</dd>
+		<dd><input type ='radio' name='obs_consequence' value='No'>No</dd>
+    <dt>Comments:</dt>
+		<dd><textarea name = 'comments' rows='5' cols='40' > </textarea></dd>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</dl>
+
+
+<input type='submit' value='Predict'>
+
+</form>
+</div>
+
+</body>
+</html>
