@@ -5,16 +5,16 @@
     <form action="" method="post" novalidate>
         {{ form.hidden_tag() }}
         <p>
-            {{ form.age.label }}<br>
-            {{ form.age() }}
+            {{ form.Age.label }}<br>
+            {{ form.Age() }}
         </p>
         <p>
-            {{ form.gender.label }}<br>
-            {{ form.gender() }}
+            {{ form.Gender.label }}<br>
+            {{ form.Gender() }}
         </p>
         <p>
-            {{ form.country.label }}<br>
-            {{ form.country() }}
+            {{ form.Country.label }}<br>
+            {{ form.Country() }}
         </p>
         <p>
             {{ form.state.label }}<br>
@@ -75,6 +75,10 @@
         <p>
             {{ form.mental_health_consequence.label }}<br>
             {{ form.mental_health_consequence() }}
+        </p>
+        <p>
+            {{ form.phys_health_consequence.label }}<br>
+            {{ form.phys_health_consequence() }}
         </p>
         <p>
             {{ form.coworkers.label }}<br>

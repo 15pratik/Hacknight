@@ -3,9 +3,9 @@ from wtforms import StringField, PasswordField, BooleanField, SubmitField, Integ
 from wtforms.validators import DataRequired
 
 class DataForm(FlaskForm):
-    age = IntegerField('Age')
-    gender = StringField('Gender')
-    country = StringField('Country')
+    Age = IntegerField('Age')
+    Gender = StringField('Gender')
+    Country = StringField('Country')
     state = StringField('State')
     self_employed = StringField('Self Employed')
     family_history = StringField('Family History')
