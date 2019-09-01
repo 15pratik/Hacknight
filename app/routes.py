@@ -35,10 +35,10 @@ def process(formDict):
                      'mental_vs_physical', 'obs_consequence', 'comments']
     featureDict = {}
     for k in required_keys:
-        default = "Yes"
+        default = "No"
         if k == 'Age':
-            default = 21
-        featureDict[k] = featureDict.get(k, default)
+            default = "21"
+        featureDict[k] = [featureDict.get(k, default)]
     return featureDict
 
 @app.route('/api/getEmpData', methods=['POST'])
@@ -46,7 +46,8 @@ def getEmpdata():
     print("###REQUEST####")
     pp(request.__dict__)
     print("#####PRINTED#########")
-    prob_yes = 0.71#treatment_prediction(process(request.get_json()))
+    pp(process(request.get_json()))
+    prob_yes = treatment_prediction(process(request.get_json()))[0]
     print(prob_yes)
     print('####POSTING TO SLACK#####')
     post_to_hr(request.get_json(),prob_yes)
