@@ -26,6 +26,8 @@ def forms():
         return render_template("result.html", prob_yes = result)
 
 def process(formDict):
+    print("FORM$$$$$$$$$$$$$$$$")
+    print(formDict)
     required_keys = ['Age', 'Gender', 'Country', 'state', 'self_employed', 
                      'family_history', 'work_interfere', 'no_employees', 
                      'remote_work', 'tech_company', 'benefits', 'care_options',
@@ -38,7 +40,9 @@ def process(formDict):
         default = "No"
         if k == 'Age':
             default = "21"
-        featureDict[k] = [featureDict.get(k, default)]
+        featureDict[k] = [formDict.get(k, default)]
+    print("FEATURE$$$$$$$$$$$$$$$$")
+    print(featureDict)
     return featureDict
 
 @app.route('/api/getEmpData', methods=['POST'])
